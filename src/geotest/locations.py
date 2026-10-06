@@ -43,6 +43,23 @@ OSM_OVERPASS_FALLBACK_URLS = (
 OSM_CZECHIA_AREA_ID = 3_600_000_000 + 51_684
 OSM_CZECHIA_BBOX = "48.5,12.0,51.1,18.9"
 OVERPASS_CACHE_DIR = Path(".cache/geotest")
+MINIMUM_MUNICIPALITY_POPULATION = 2_500
+PRAHA_RUIAN_CODE = "554782"
+PRAHA_FALLBACK_CENTRE = {
+    "latitude": 50.0873677,
+    "longitude": 14.4213250,
+    "osm_element_id": 815041625,
+}
+PRAHA_FALLBACK_METHOD = "Mariánský sloup, Staroměstské náměstí (fallback)"
+AIRPORT_COORDINATE_OVERRIDES = {
+    "LKMR": {
+        "latitude": 49.92277778,
+        "longitude": 12.72472222,
+        "provider": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Mari%C3%A1nsk%C3%A9_L%C3%A1zn%C4%9B_Airport",
+        "method": "AIP ICAO match; user-provided DMS coordinates",
+    },
+}
 
 _POPULATION_BANDS = (
     (500_000, "500000_plus"),
@@ -50,6 +67,7 @@ _POPULATION_BANDS = (
     (50_000, "50000_99999"),
     (25_000, "25000_49999"),
     (5_000, "5000_24999"),
+    (2_500, "2500_4999"),
 )
 _OFFICE_PREFIXES = (
     "magistrat hlavniho mesta",
@@ -108,16 +126,16 @@ def population_class(population: int) -> tuple[str, int | None]:
     for threshold, label in _POPULATION_BANDS:
         if population >= threshold:
             return label, threshold
-    return "under_5000", None
+    return "under_2500", None
 
 
 def parse_population_csv(
     csv_text: str,
-    minimum_population_exclusive: int | None = 2_000,
+    minimum_population_inclusive: int | None = MINIMUM_MUNICIPALITY_POPULATION,
 ) -> list[dict[str, object]]:
     if (
-        minimum_population_exclusive is not None
-        and minimum_population_exclusive < 0
+        minimum_population_inclusive is not None
+        and minimum_population_inclusive < 0
     ):
         raise ValueError("Minimum population threshold cannot be negative")
     rows = csv.DictReader(io.StringIO(csv_text.lstrip("\ufeff")))
@@ -158,12 +176,12 @@ def parse_population_csv(
         )
     if not municipalities:
         raise ValueError("CSO returned no municipality population records")
-    if minimum_population_exclusive is None:
+    if minimum_population_inclusive is None:
         return municipalities
     return [
         municipality
         for municipality in municipalities
-        if municipality["population"] > minimum_population_exclusive
+        if municipality["population"] >= minimum_population_inclusive
     ]
 
 
@@ -424,6 +442,19 @@ def _municipality_centres(
         code = str(municipality["ruian_code"])
         if code in centres:
             continue
+        if code == PRAHA_RUIAN_CODE:
+            centres[code] = (
+                (
+                    PRAHA_FALLBACK_CENTRE["latitude"],
+                    PRAHA_FALLBACK_CENTRE["longitude"],
+                ),
+                {
+                    "type": "way",
+                    "id": PRAHA_FALLBACK_CENTRE["osm_element_id"],
+                    "coordinate_method": PRAHA_FALLBACK_METHOD,
+                },
+            )
+            continue
         name = _fold(str(municipality["name"]))
         candidates = name_candidates.get(name, [])
         if len(candidates) == 1:
@@ -506,6 +537,17 @@ def _airport_categories(entry: dict[str, str]) -> dict[str, bool]:
         "sport": general_aviation,
         "military": "MIL" in traffic or "M" in use_codes,
     }
+
+
+def _eligible_airport_entries(
+    entries: list[dict[str, str]],
+) -> list[dict[str, str]]:
+    return [
+        entry
+        for entry in entries
+        if entry["airport_type"] == "aerodrome"
+        and any(_airport_categories(entry).values())
+    ]
 
 
 def _airport_name_score(first: str, second: str) -> int:
@@ -630,6 +672,17 @@ def _airport_coordinates(
                 },
             )
 
+        override = AIRPORT_COORDINATE_OVERRIDES.get(code)
+        if override is not None:
+            coordinates[code] = (
+                (override["latitude"], override["longitude"]),
+                {
+                    "provider": override["provider"],
+                    "url": override["url"],
+                    "method": override["method"],
+                },
+            )
+
     missing = sorted({entry["icao"] for entry in entries} - set(coordinates))
     if missing:
         raise ValueError(
@@ -688,19 +741,27 @@ def build_location_document(
 ) -> dict[str, object]:
     source_municipalities = parse_population_csv(
         population_csv,
-        minimum_population_exclusive=None,
+        minimum_population_inclusive=None,
     )
     municipalities = [
         municipality
         for municipality in source_municipalities
-        if municipality["population"] > 2_000
+        if municipality["population"] >= MINIMUM_MUNICIPALITY_POPULATION
     ]
     if not municipalities:
-        raise ValueError("CSO population data has no municipalities above 2,000")
+        raise ValueError(
+            "CSO population data has no municipalities with at least "
+            f"{MINIMUM_MUNICIPALITY_POPULATION} residents"
+        )
     centres = _municipality_centres(municipalities, boundary_elements)
     offices = _municipal_offices(office_elements, municipalities, centres)
 
     aip_entries, aip_effective_date = parse_aip_index(aip_html)
+    aip_entries = _eligible_airport_entries(aip_entries)
+    if not aip_entries:
+        raise ValueError(
+            "The AIP index has no aerodromes in the selected categories"
+        )
     ourairports_rows = _parse_ourairports_csv(ourairports_csv)
     coordinate_query = _airport_coordinate_query(aip_entries, ourairports_rows)
     if coordinate_query is not None:
@@ -734,7 +795,10 @@ def build_location_document(
                 "provider": "OpenStreetMap",
                 "element_type": boundary_element.get("type"),
                 "element_id": boundary_element.get("id"),
-                "method": "administrative boundary centre (fallback; not the town hall)",
+                "method": boundary_element.get(
+                    "coordinate_method",
+                    "administrative boundary centre (fallback; not the town hall)",
+                ),
             }
         else:
             position, element = office
@@ -788,8 +852,18 @@ def build_location_document(
         "generated_at": generated_at or datetime.now(UTC).isoformat(),
         "population_year": population_year,
         "municipality_population_filter": {
-            "operator": ">",
-            "minimum_population": 2_000,
+            "operator": ">=",
+            "minimum_population": MINIMUM_MUNICIPALITY_POPULATION,
+        },
+        "airport_filter": {
+            "airport_types": ["aerodrome"],
+            "included_categories": [
+                "international",
+                "civil",
+                "sport",
+                "military",
+            ],
+            "operator": "any",
         },
         "grid": {
             "edge_length_km": settings.edge_length_km,
@@ -807,11 +881,12 @@ def build_location_document(
             "municipalities_excluded_by_population": (
                 len(source_municipalities) - len(municipalities)
             ),
+            "aip_entries_in_source_index": len(parse_aip_index(aip_html)[0]),
             "municipalities_using_townhall_points": office_count,
             "municipalities_using_boundary_centres": (
                 len(municipalities) - office_count
             ),
-            "aip_aerodromes_and_heliports": len(aip_entries),
+            "aip_aerodromes": len(aip_entries),
             "total_records": len(records),
         },
         "classification_notes": {
@@ -854,6 +929,11 @@ def build_location_document(
                 "url": OURAIRPORTS_URL,
                 "used_for": "Aerodrome GPS coordinates when not matched in OpenStreetMap.",
             },
+            {
+                "name": "Wikipedia — Mariánské Lázně Airport",
+                "url": AIRPORT_COORDINATE_OVERRIDES["LKMR"]["url"],
+                "used_for": "User-provided coordinates for LKMR.",
+            },
         ],
         "records": records,
     }
@@ -875,6 +955,11 @@ def build_location_dataset(year: int | None = None) -> dict[str, object]:
     aip_html = _request_text(AIP_INDEX_URL)
     ourairports_csv = _request_text(OURAIRPORTS_URL)
     aip_entries, _ = parse_aip_index(aip_html)
+    aip_entries = _eligible_airport_entries(aip_entries)
+    if not aip_entries:
+        raise ValueError(
+            "The AIP index has no aerodromes in the selected categories"
+        )
     ourairports_rows = _parse_ourairports_csv(ourairports_csv)
     coordinate_query = _airport_coordinate_query(aip_entries, ourairports_rows)
     aeroway_elements = (

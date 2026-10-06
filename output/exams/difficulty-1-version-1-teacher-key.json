@@ -1,0 +1,186 @@
+{
+  "schema_version": 1,
+  "difficulty": 1,
+  "version": 1,
+  "seed": 20261006,
+  "population_year": 2025,
+  "selection": {
+    "population_minimum_inclusive": 100000,
+    "supplemental_population_minimum_inclusive": 75000,
+    "supplemental_settlement_count": 2,
+    "airport_category": "international",
+    "airport_icao_codes": [
+      "LKPR",
+      "LKMT"
+    ],
+    "seed": 20261006
+  },
+  "grid": {
+    "edge_length_km": 41.5,
+    "offset_east_km": -29.0,
+    "offset_north_km": -10.0,
+    "rotation_degrees": 46.5,
+    "cell_labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F",
+      "G",
+      "H",
+      "I",
+      "J",
+      "K",
+      "L",
+      "M",
+      "N",
+      "O",
+      "P",
+      "Q",
+      "R",
+      "S",
+      "T",
+      "U",
+      "V",
+      "W",
+      "X",
+      "Y",
+      "Z"
+    ],
+    "fully_covered": true
+  },
+  "item_count": 10,
+  "answers": [
+    {
+      "number": 1,
+      "location_id": "municipality:582786",
+      "name": "Brno",
+      "category": "sidlo",
+      "cell": "W",
+      "gps": {
+        "latitude": 49.2021252,
+        "longitude": 16.5779122
+      },
+      "icao": null,
+      "population": 404296
+    },
+    {
+      "number": 2,
+      "location_id": "municipality:554782",
+      "name": "Praha",
+      "category": "sidlo",
+      "cell": "M",
+      "gps": {
+        "latitude": 50.0873677,
+        "longitude": 14.421325
+      },
+      "icao": null,
+      "population": 1407084
+    },
+    {
+      "number": 3,
+      "location_id": "municipality:544256",
+      "name": "České Budějovice",
+      "category": "sidlo",
+      "cell": "U",
+      "gps": {
+        "latitude": 48.9766454,
+        "longitude": 14.4910531
+      },
+      "icao": null,
+      "population": 97128
+    },
+    {
+      "number": 4,
+      "location_id": "municipality:554821",
+      "name": "Ostrava",
+      "category": "sidlo",
+      "cell": "N",
+      "gps": {
+        "latitude": 49.8197665,
+        "longitude": 18.2373511
+      },
+      "icao": null,
+      "population": 280853
+    },
+    {
+      "number": 5,
+      "location_id": "airport:LKPR",
+      "name": "PRAHA/Ruzyně",
+      "category": "airport",
+      "cell": "M",
+      "gps": {
+        "latitude": 50.100874,
+        "longitude": 14.259911
+      },
+      "icao": "LKPR",
+      "population": null
+    },
+    {
+      "number": 6,
+      "location_id": "airport:LKMT",
+      "name": "OSTRAVA/Mošnov",
+      "category": "airport",
+      "cell": "L",
+      "gps": {
+        "latitude": 49.696301,
+        "longitude": 18.111099
+      },
+      "icao": "LKMT",
+      "population": null
+    },
+    {
+      "number": 7,
+      "location_id": "municipality:563889",
+      "name": "Liberec",
+      "category": "sidlo",
+      "cell": "B",
+      "gps": {
+        "latitude": 50.7661604,
+        "longitude": 15.0499257
+      },
+      "icao": null,
+      "population": 108214
+    },
+    {
+      "number": 8,
+      "location_id": "municipality:500496",
+      "name": "Olomouc",
+      "category": "sidlo",
+      "cell": "R",
+      "gps": {
+        "latitude": 49.5983322,
+        "longitude": 17.2790951
+      },
+      "icao": null,
+      "population": 105297
+    },
+    {
+      "number": 9,
+      "location_id": "municipality:554791",
+      "name": "Plzeň",
+      "category": "sidlo",
+      "cell": "K",
+      "gps": {
+        "latitude": 49.7416827,
+        "longitude": 13.3719148
+      },
+      "icao": null,
+      "population": 187863
+    },
+    {
+      "number": 10,
+      "location_id": "municipality:569810",
+      "name": "Hradec Králové",
+      "category": "sidlo",
+      "cell": "H",
+      "gps": {
+        "latitude": 50.2136749,
+        "longitude": 15.8409008
+      },
+      "icao": null,
+      "population": 93534
+    }
+  ]
+}

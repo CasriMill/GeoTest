@@ -1,9 +1,15 @@
 import argparse
 from collections.abc import Sequence
+import json
 from pathlib import Path
 import sys
 
 from geotest.boundary import create_boundary_map
+from geotest.exams import (
+    DEFAULT_EXAM_OUTPUT_DIR,
+    build_exam_documents,
+    write_exam_documents,
+)
 from geotest.final_map import (
     DEFAULT_FINAL_MAP_PATH,
     DEFAULT_SETTINGS_PATH,
@@ -19,7 +25,7 @@ def main(argv: Sequence[str] | None = None) -> None:
     parser.add_argument(
         "command",
         nargs="?",
-        choices=("boundary", "grid", "grid3", "gui", "final", "locations"),
+        choices=("boundary", "grid", "grid3", "gui", "final", "locations", "exam"),
     )
     parser.add_argument(
         "--output",
@@ -36,6 +42,58 @@ def main(argv: Sequence[str] | None = None) -> None:
         "--year",
         type=int,
         help="CSO population reference year (default: latest available year)",
+    )
+    parser.add_argument(
+        "--difficulty",
+        type=int,
+        default=1,
+        help="exam difficulty level",
+    )
+    parser.add_argument(
+        "--population-minimum",
+        type=int,
+        default=100_000,
+        help="inclusive primary municipality population threshold",
+    )
+    parser.add_argument(
+        "--supplemental-population-minimum",
+        type=int,
+        help="inclusive lower threshold for supplemental settlements",
+    )
+    parser.add_argument(
+        "--supplemental-settlement-count",
+        type=int,
+        default=0,
+        help="number of additional settlements from below the primary threshold",
+    )
+    parser.add_argument(
+        "--airport-category",
+        choices=("international", "civil", "sport", "military"),
+        default="international",
+        help="airport category to select",
+    )
+    parser.add_argument(
+        "--airport-count",
+        type=int,
+        default=2,
+        help="number of airports to sample",
+    )
+    parser.add_argument(
+        "--airport-icao",
+        nargs="*",
+        help="explicit airport ICAO codes instead of a random sample",
+    )
+    parser.add_argument(
+        "--seed",
+        type=int,
+        default=20261006,
+        help="seed for reproducible airport and question ordering",
+    )
+    parser.add_argument(
+        "--exam-output-dir",
+        type=Path,
+        default=DEFAULT_EXAM_OUTPUT_DIR,
+        help="directory for student and teacher-key JSON files",
     )
     args = parser.parse_args(argv or [])
 
@@ -97,8 +155,34 @@ def main(argv: Sequence[str] | None = None) -> None:
         print(
             f"Location JSON written to {output_path}: "
             f"{counts['municipalities']} municipalities, "
-            f"{counts['aip_aerodromes_and_heliports']} AIP aerodromes/heliports "
+            f"{counts['aip_aerodromes']} AIP aerodromes "
             f"({document['population_year']} population data)"
+        )
+        return
+
+    if args.command == "exam":
+        locations_document = json.loads(
+            DEFAULT_LOCATIONS_PATH.read_text(encoding="utf-8")
+        )
+        student_document, answer_document = build_exam_documents(
+            locations_document,
+            difficulty=args.difficulty,
+            population_minimum=args.population_minimum,
+            supplemental_population_minimum=args.supplemental_population_minimum,
+            supplemental_settlement_count=args.supplemental_settlement_count,
+            airport_category=args.airport_category,
+            airport_count=args.airport_count,
+            seed=args.seed,
+            airport_icao_codes=args.airport_icao,
+        )
+        student_path, answer_path = write_exam_documents(
+            student_document,
+            answer_document,
+            args.exam_output_dir,
+        )
+        print(
+            f"Exam set written: {student_path} and {answer_path} "
+            f"({student_document['item_count']} items, seed {args.seed})"
         )
         return
 
