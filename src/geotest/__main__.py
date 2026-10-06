@@ -11,6 +11,7 @@ from geotest.final_map import (
 )
 from geotest.hexgrid import create_hex_grid_map, create_third_level_map
 from geotest.grid_gui import launch_grid_gui
+from geotest.locations import DEFAULT_LOCATIONS_PATH, create_location_json
 
 
 def main(argv: Sequence[str] | None = None) -> None:
@@ -18,7 +19,7 @@ def main(argv: Sequence[str] | None = None) -> None:
     parser.add_argument(
         "command",
         nargs="?",
-        choices=("boundary", "grid", "grid3", "gui", "final"),
+        choices=("boundary", "grid", "grid3", "gui", "final", "locations"),
     )
     parser.add_argument(
         "--output",
@@ -30,6 +31,11 @@ def main(argv: Sequence[str] | None = None) -> None:
         type=Path,
         default=DEFAULT_SETTINGS_PATH,
         help="JSON grid settings file used by the final command",
+    )
+    parser.add_argument(
+        "--year",
+        type=int,
+        help="CSO population reference year (default: latest available year)",
     )
     args = parser.parse_args(argv or [])
 
@@ -79,6 +85,20 @@ def main(argv: Sequence[str] | None = None) -> None:
             f"minimum coverage {min(ratios, default=0):.1%}, "
             f"{sum(round(ratio * 100, 1) == 100.0 for ratio in ratios)} "
             "shown as 100.0% inside Czechia"
+        )
+        return
+
+    if args.command == "locations":
+        output_path, document = create_location_json(
+            args.output or DEFAULT_LOCATIONS_PATH,
+            year=args.year,
+        )
+        counts = document["counts"]
+        print(
+            f"Location JSON written to {output_path}: "
+            f"{counts['municipalities']} municipalities, "
+            f"{counts['aip_aerodromes_and_heliports']} AIP aerodromes/heliports "
+            f"({document['population_year']} population data)"
         )
         return
 

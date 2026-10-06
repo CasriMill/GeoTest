@@ -4,6 +4,8 @@ from math import isfinite
 from pathlib import Path
 from collections.abc import Sequence
 
+from shapely.geometry import Point
+
 from geotest.boundary import (
     fetch_boundary_data,
     parse_boundary_rings,
@@ -14,6 +16,7 @@ from geotest.tiling import (
     GridAnalysis,
     analyze_hex_tiling,
     project_boundary_to_km,
+    project_wgs84_point,
     unproject_km_point,
 )
 
@@ -84,6 +87,31 @@ def alphabetic_label(index: int) -> str:
         index -= 1
 
 
+def ordered_hex_cells(analysis: GridAnalysis):
+    return sorted(
+        analysis.cells,
+        key=lambda cell: (-cell.polygon.centroid.y, cell.polygon.centroid.x),
+    )
+
+
+def find_cell_label(
+    analysis: GridAnalysis,
+    wgs84_point: tuple[float, float],
+    rings: Sequence[Ring],
+) -> str:
+    point = Point(project_wgs84_point(rings, wgs84_point))
+    matching_indices = [
+        index
+        for index, cell in enumerate(ordered_hex_cells(analysis))
+        if cell.polygon.covers(point)
+    ]
+    if not matching_indices:
+        raise ValueError(
+            f"Point {wgs84_point!r} is not covered by an occupied grid cell"
+        )
+    return alphabetic_label(min(matching_indices))
+
+
 def render_final_map_svg(
     rings: Sequence[Ring],
     settings: HexGridSettings,
@@ -101,10 +129,7 @@ def render_final_map_svg(
             f"Grid leaves {analysis.uncovered_area_km2:.9f} km² of Czechia uncovered"
         )
 
-    ordered_cells = sorted(
-        analysis.cells,
-        key=lambda cell: (-cell.polygon.centroid.y, cell.polygon.centroid.x),
-    )
+    ordered_cells = ordered_hex_cells(analysis)
     overlays = [
         (
             [

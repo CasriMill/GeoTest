@@ -102,6 +102,33 @@ select another JSON preset and `--output` to change the SVG destination.
 The checked-in initial preset uses a 41.5 km edge, 46.5° rotation, a -29 km
 east offset, and a -10 km north offset.
 
+## Locations data
+
+Generate the JSON list of Czech municipalities with more than 2,000 residents
+and AIP-listed aerodromes and heliports:
+
+```powershell
+python -m geotest locations
+```
+
+The default output is `data/locations.json`; `--output` selects another path
+and `--year` selects a CSO reference year. The municipality population limit
+is strictly greater than 2,000; all source rows are processed, but smaller
+municipalities are omitted from the generated file. The file retains exact municipal
+population alongside a derived threshold class, ICAO codes and AIP categories
+for aviation locations, WGS84 GPS coordinates, and the A–Z grid cell.
+Coordinates include provider and method metadata. Municipal-office points are
+used where OpenStreetMap maps a matching `amenity=townhall`; otherwise the
+municipality boundary centre is used and explicitly marked as a fallback.
+Aerodrome points are matched first in OpenStreetMap and then in OurAirports.
+
+Population figures and municipality identifiers come from the CSO DataStat
+dataset `OBY01B01`. The AIP AD 1.3 index supplies ICAO codes and aviation
+classification; its `G` general-aviation code is recorded as a sport candidate
+and is broader than a definitive sports-aerodrome designation. Map coordinates
+from OpenStreetMap are subject to the ODbL; each source and source element is
+recorded in the data.
+
 ## Test
 
 ```powershell

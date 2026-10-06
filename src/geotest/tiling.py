@@ -76,6 +76,17 @@ def unproject_km_point(
     )
 
 
+def project_wgs84_point(
+    rings: Sequence[Ring],
+    point: tuple[float, float],
+) -> tuple[float, float]:
+    center_lon, center_lat, longitude_scale = _projection_parameters(rings)
+    return (
+        (point[0] - center_lon) * longitude_scale,
+        (point[1] - center_lat) * KILOMETERS_PER_DEGREE,
+    )
+
+
 def _projection_parameters(
     rings: Sequence[Ring],
 ) -> tuple[float, float, float]:

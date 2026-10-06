@@ -5,11 +5,14 @@ from pathlib import Path
 from geotest.final_map import (
     HexGridSettings,
     alphabetic_label,
+    find_cell_label,
     load_settings,
+    ordered_hex_cells,
     render_final_map_svg,
     save_settings,
 )
 from geotest.boundary import parse_boundary_rings
+from geotest.tiling import analyze_hex_tiling, project_boundary_to_km, unproject_km_point
 
 
 BOUNDARY_XML = b"""\
@@ -59,6 +62,24 @@ class FinalMapTests(unittest.TestCase):
         self.assertIn("final labeled hex grid", svg)
         for index in range(len(analysis.cells)):
             self.assertIn(f">{alphabetic_label(index)}</text>", svg)
+
+    def test_cell_lookup_matches_map_label_order(self) -> None:
+        rings = parse_boundary_rings(BOUNDARY_XML)
+        settings = HexGridSettings(
+            edge_length_km=10,
+            offset_east_km=0,
+            offset_north_km=0,
+            rotation_degrees=0,
+        )
+        country = project_boundary_to_km(rings)
+        analysis = analyze_hex_tiling(country, settings.edge_length_km)
+        expected_point = ordered_hex_cells(analysis)[0].polygon.centroid
+        geographic_point = unproject_km_point(
+            rings,
+            (expected_point.x, expected_point.y),
+        )
+
+        self.assertEqual(find_cell_label(analysis, geographic_point, rings), "A")
 
 
 if __name__ == "__main__":
