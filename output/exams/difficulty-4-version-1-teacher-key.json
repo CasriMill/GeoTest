@@ -1,0 +1,164 @@
+{
+  "schema_version": 1,
+  "difficulty": 4,
+  "version": 1,
+  "set_id": "difficulty-4-version-1",
+  "seed": 20261006,
+  "population_year": 2025,
+  "grid": {
+    "edge_length_km": 41.5,
+    "offset_east_km": -29.0,
+    "offset_north_km": -10.0,
+    "rotation_degrees": 46.5,
+    "cell_labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F",
+      "G",
+      "H",
+      "I",
+      "J",
+      "K",
+      "L",
+      "M",
+      "N",
+      "O",
+      "P",
+      "Q",
+      "R",
+      "S",
+      "T",
+      "U",
+      "V",
+      "W",
+      "X",
+      "Y",
+      "Z"
+    ],
+    "fully_covered": true
+  },
+  "item_count": 9,
+  "shared_with_previous_version": 0,
+  "answers": [
+    {
+      "number": 1,
+      "location_id": "airport:LKPC",
+      "name": "Panenský Týnec",
+      "category": "airport",
+      "cell": "F",
+      "gps": {
+        "latitude": 50.306099,
+        "longitude": 13.9342
+      },
+      "icao": "LKPC",
+      "population": null
+    },
+    {
+      "number": 2,
+      "location_id": "airport:LKKV",
+      "name": "Karlovy Vary",
+      "category": "airport",
+      "cell": "K",
+      "gps": {
+        "latitude": 50.202999,
+        "longitude": 12.915
+      },
+      "icao": "LKKV",
+      "population": null
+    },
+    {
+      "number": 3,
+      "location_id": "municipality:595209",
+      "name": "Žďár nad Sázavou",
+      "category": "sidlo",
+      "cell": "P",
+      "gps": {
+        "latitude": 49.5689023,
+        "longitude": 15.9431036
+      },
+      "icao": null,
+      "population": 20247
+    },
+    {
+      "number": 4,
+      "location_id": "municipality:557153",
+      "name": "Sušice",
+      "category": "sidlo",
+      "cell": "S",
+      "gps": {
+        "latitude": 49.2171668,
+        "longitude": 13.5281855
+      },
+      "icao": null,
+      "population": 10689
+    },
+    {
+      "number": 5,
+      "location_id": "municipality:505927",
+      "name": "Opava",
+      "category": "sidlo",
+      "cell": "L",
+      "gps": {
+        "latitude": 49.9208963,
+        "longitude": 17.8936819
+      },
+      "icao": null,
+      "population": 54881
+    },
+    {
+      "number": 6,
+      "location_id": "municipality:555134",
+      "name": "Pardubice",
+      "category": "sidlo",
+      "cell": "H",
+      "gps": {
+        "latitude": 50.0349297,
+        "longitude": 15.7583829
+      },
+      "icao": null,
+      "population": 92713
+    },
+    {
+      "number": 7,
+      "location_id": "municipality:567639",
+      "name": "Krupka",
+      "category": "sidlo",
+      "cell": "F",
+      "gps": {
+        "latitude": 50.7009861,
+        "longitude": 13.8686181
+      },
+      "icao": null,
+      "population": 12731
+    },
+    {
+      "number": 8,
+      "location_id": "airport:LKPM",
+      "name": "Příbram",
+      "category": "airport",
+      "cell": "M",
+      "gps": {
+        "latitude": 49.7201,
+        "longitude": 14.1006
+      },
+      "icao": "LKPM",
+      "population": null
+    },
+    {
+      "number": 9,
+      "location_id": "municipality:554481",
+      "name": "Cheb",
+      "category": "sidlo",
+      "cell": "I",
+      "gps": {
+        "latitude": 50.0608305,
+        "longitude": 12.3612837
+      },
+      "icao": null,
+      "population": 32892
+    }
+  ]
+}

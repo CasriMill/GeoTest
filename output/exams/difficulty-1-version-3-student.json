@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "difficulty": 1,
-  "version": 1,
-  "set_id": "difficulty-1-version-1",
+  "version": 3,
+  "set_id": "difficulty-1-version-3",
   "seed": 20261006,
   "population_year": 2025,
   "grid": {
@@ -41,43 +41,43 @@
     "fully_covered": true
   },
   "item_count": 6,
-  "shared_with_previous_version": 0,
+  "shared_with_previous_version": 3,
   "questions": [
     {
       "number": 1,
-      "name": "Praha",
-      "category": "sidlo",
-      "location_id": "municipality:554782"
-    },
-    {
-      "number": 2,
-      "name": "Liberec",
-      "category": "sidlo",
-      "location_id": "municipality:563889"
-    },
-    {
-      "number": 3,
       "name": "Brno",
       "category": "sidlo",
       "location_id": "municipality:582786"
     },
     {
-      "number": 4,
-      "name": "LKKV",
+      "number": 2,
+      "name": "LKLT",
       "category": "airport",
-      "location_id": "airport:LKKV"
+      "location_id": "airport:LKLT"
     },
     {
-      "number": 5,
+      "number": 3,
+      "name": "LKPD",
+      "category": "airport",
+      "location_id": "airport:LKPD"
+    },
+    {
+      "number": 4,
       "name": "Plzeň",
       "category": "sidlo",
       "location_id": "municipality:554791"
     },
     {
+      "number": 5,
+      "name": "Praha",
+      "category": "sidlo",
+      "location_id": "municipality:554782"
+    },
+    {
       "number": 6,
-      "name": "LKPO",
-      "category": "airport",
-      "location_id": "airport:LKPO"
+      "name": "Ostrava",
+      "category": "sidlo",
+      "location_id": "municipality:554821"
     }
   ]
 }

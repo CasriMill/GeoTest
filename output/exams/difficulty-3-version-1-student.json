@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "difficulty": 1,
+  "difficulty": 3,
   "version": 1,
-  "set_id": "difficulty-1-version-1",
+  "set_id": "difficulty-3-version-1",
   "seed": 20261006,
   "population_year": 2025,
   "grid": {
@@ -40,44 +40,56 @@
     ],
     "fully_covered": true
   },
-  "item_count": 6,
+  "item_count": 8,
   "shared_with_previous_version": 0,
   "questions": [
     {
       "number": 1,
-      "name": "Praha",
+      "name": "Olomouc",
       "category": "sidlo",
-      "location_id": "municipality:554782"
+      "location_id": "municipality:500496"
     },
     {
       "number": 2,
-      "name": "Liberec",
+      "name": "Jihlava",
       "category": "sidlo",
-      "location_id": "municipality:563889"
+      "location_id": "municipality:586846"
     },
     {
       "number": 3,
-      "name": "Brno",
-      "category": "sidlo",
-      "location_id": "municipality:582786"
-    },
-    {
-      "number": 4,
-      "name": "LKKV",
-      "category": "airport",
-      "location_id": "airport:LKKV"
-    },
-    {
-      "number": 5,
-      "name": "Plzeň",
-      "category": "sidlo",
-      "location_id": "municipality:554791"
-    },
-    {
-      "number": 6,
       "name": "LKPO",
       "category": "airport",
       "location_id": "airport:LKPO"
+    },
+    {
+      "number": 4,
+      "name": "LKCH",
+      "category": "airport",
+      "location_id": "airport:LKCH"
+    },
+    {
+      "number": 5,
+      "name": "Bohumín",
+      "category": "sidlo",
+      "location_id": "municipality:599051"
+    },
+    {
+      "number": 6,
+      "name": "České Budějovice",
+      "category": "sidlo",
+      "location_id": "municipality:544256"
+    },
+    {
+      "number": 7,
+      "name": "Příbram",
+      "category": "sidlo",
+      "location_id": "municipality:539911"
+    },
+    {
+      "number": 8,
+      "name": "LKKB",
+      "category": "airport",
+      "location_id": "airport:LKKB"
     }
   ]
 }

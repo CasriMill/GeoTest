@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "difficulty": 5,
+  "version": 4,
+  "set_id": "difficulty-5-version-4",
+  "seed": 20261006,
+  "population_year": 2025,
+  "grid": {
+    "edge_length_km": 41.5,
+    "offset_east_km": -29.0,
+    "offset_north_km": -10.0,
+    "rotation_degrees": 46.5,
+    "cell_labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F",
+      "G",
+      "H",
+      "I",
+      "J",
+      "K",
+      "L",
+      "M",
+      "N",
+      "O",
+      "P",
+      "Q",
+      "R",
+      "S",
+      "T",
+      "U",
+      "V",
+      "W",
+      "X",
+      "Y",
+      "Z"
+    ],
+    "fully_covered": true
+  },
+  "item_count": 10,
+  "shared_with_previous_version": 5,
+  "questions": [
+    {
+      "number": 1,
+      "name": "Kadaň",
+      "category": "sidlo",
+      "location_id": "municipality:563102"
+    },
+    {
+      "number": 2,
+      "name": "LKKO",
+      "category": "airport",
+      "location_id": "airport:LKKO"
+    },
+    {
+      "number": 3,
+      "name": "LKFR",
+      "category": "airport",
+      "location_id": "airport:LKFR"
+    },
+    {
+      "number": 4,
+      "name": "Jihlava",
+      "category": "sidlo",
+      "location_id": "municipality:586846"
+    },
+    {
+      "number": 5,
+      "name": "LKUO",
+      "category": "airport",
+      "location_id": "airport:LKUO"
+    },
+    {
+      "number": 6,
+      "name": "Nýrsko",
+      "category": "sidlo",
+      "location_id": "municipality:556831"
+    },
+    {
+      "number": 7,
+      "name": "Vrchlabí",
+      "category": "sidlo",
+      "location_id": "municipality:579858"
+    },
+    {
+      "number": 8,
+      "name": "Kaplice",
+      "category": "sidlo",
+      "location_id": "municipality:545562"
+    },
+    {
+      "number": 9,
+      "name": "Poděbrady",
+      "category": "sidlo",
+      "location_id": "municipality:537683"
+    },
+    {
+      "number": 10,
+      "name": "LKVO",
+      "category": "airport",
+      "location_id": "airport:LKVO"
+    }
+  ]
+}

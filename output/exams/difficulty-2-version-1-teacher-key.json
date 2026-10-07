@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "difficulty": 1,
+  "difficulty": 2,
   "version": 1,
-  "set_id": "difficulty-1-version-1",
+  "set_id": "difficulty-2-version-1",
   "seed": 20261006,
   "population_year": 2025,
   "grid": {
@@ -40,34 +40,34 @@
     ],
     "fully_covered": true
   },
-  "item_count": 6,
+  "item_count": 7,
   "shared_with_previous_version": 0,
   "answers": [
     {
       "number": 1,
-      "location_id": "municipality:554782",
-      "name": "Praha",
-      "category": "sidlo",
-      "cell": "M",
+      "location_id": "airport:LKLB",
+      "name": "Liberec",
+      "category": "airport",
+      "cell": "B",
       "gps": {
-        "latitude": 50.0873677,
-        "longitude": 14.421325
+        "latitude": 50.767053,
+        "longitude": 15.023071
       },
-      "icao": null,
-      "population": 1407084
+      "icao": "LKLB",
+      "population": null
     },
     {
       "number": 2,
-      "location_id": "municipality:563889",
-      "name": "Liberec",
+      "location_id": "municipality:505927",
+      "name": "Opava",
       "category": "sidlo",
-      "cell": "B",
+      "cell": "L",
       "gps": {
-        "latitude": 50.7661604,
-        "longitude": 15.0499257
+        "latitude": 49.9208963,
+        "longitude": 17.8936819
       },
       "icao": null,
-      "population": 108214
+      "population": 54881
     },
     {
       "number": 3,
@@ -84,19 +84,32 @@
     },
     {
       "number": 4,
-      "location_id": "airport:LKKV",
-      "name": "Karlovy Vary",
-      "category": "airport",
-      "cell": "K",
+      "location_id": "municipality:598003",
+      "name": "Frýdek-Místek",
+      "category": "sidlo",
+      "cell": "N",
       "gps": {
-        "latitude": 50.202999,
-        "longitude": 12.915
+        "latitude": 49.6797337,
+        "longitude": 18.3416945
       },
-      "icao": "LKKV",
-      "population": null
+      "icao": null,
+      "population": 53164
     },
     {
       "number": 5,
+      "location_id": "airport:LKTC",
+      "name": "Točná",
+      "category": "airport",
+      "cell": "M",
+      "gps": {
+        "latitude": 49.985435,
+        "longitude": 14.426465
+      },
+      "icao": "LKTC",
+      "population": null
+    },
+    {
+      "number": 6,
       "location_id": "municipality:554791",
       "name": "Plzeň",
       "category": "sidlo",
@@ -109,17 +122,17 @@
       "population": 187863
     },
     {
-      "number": 6,
-      "location_id": "airport:LKPO",
-      "name": "Přerov",
-      "category": "airport",
-      "cell": "R",
+      "number": 7,
+      "location_id": "municipality:554782",
+      "name": "Praha",
+      "category": "sidlo",
+      "cell": "M",
       "gps": {
-        "latitude": 49.4258,
-        "longitude": 17.404699
+        "latitude": 50.0873677,
+        "longitude": 14.421325
       },
-      "icao": "LKPO",
-      "population": null
+      "icao": null,
+      "population": 1407084
     }
   ]
 }

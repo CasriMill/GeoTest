@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "difficulty": 5,
+  "version": 3,
+  "set_id": "difficulty-5-version-3",
+  "seed": 20261006,
+  "population_year": 2025,
+  "grid": {
+    "edge_length_km": 41.5,
+    "offset_east_km": -29.0,
+    "offset_north_km": -10.0,
+    "rotation_degrees": 46.5,
+    "cell_labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F",
+      "G",
+      "H",
+      "I",
+      "J",
+      "K",
+      "L",
+      "M",
+      "N",
+      "O",
+      "P",
+      "Q",
+      "R",
+      "S",
+      "T",
+      "U",
+      "V",
+      "W",
+      "X",
+      "Y",
+      "Z"
+    ],
+    "fully_covered": true
+  },
+  "item_count": 10,
+  "shared_with_previous_version": 5,
+  "questions": [
+    {
+      "number": 1,
+      "name": "Poděbrady",
+      "category": "sidlo",
+      "location_id": "municipality:537683"
+    },
+    {
+      "number": 2,
+      "name": "Vrchlabí",
+      "category": "sidlo",
+      "location_id": "municipality:579858"
+    },
+    {
+      "number": 3,
+      "name": "Rousínov",
+      "category": "sidlo",
+      "location_id": "municipality:593559"
+    },
+    {
+      "number": 4,
+      "name": "Jeseník",
+      "category": "sidlo",
+      "location_id": "municipality:536385"
+    },
+    {
+      "number": 5,
+      "name": "LKUO",
+      "category": "airport",
+      "location_id": "airport:LKUO"
+    },
+    {
+      "number": 6,
+      "name": "Horažďovice",
+      "category": "sidlo",
+      "location_id": "municipality:556254"
+    },
+    {
+      "number": 7,
+      "name": "LKCT",
+      "category": "airport",
+      "location_id": "airport:LKCT"
+    },
+    {
+      "number": 8,
+      "name": "Kaplice",
+      "category": "sidlo",
+      "location_id": "municipality:545562"
+    },
+    {
+      "number": 9,
+      "name": "LKVO",
+      "category": "airport",
+      "location_id": "airport:LKVO"
+    },
+    {
+      "number": 10,
+      "name": "LKCS",
+      "category": "airport",
+      "location_id": "airport:LKCS"
+    }
+  ]
+}

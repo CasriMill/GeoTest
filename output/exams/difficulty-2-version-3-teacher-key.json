@@ -1,0 +1,138 @@
+{
+  "schema_version": 1,
+  "difficulty": 2,
+  "version": 3,
+  "set_id": "difficulty-2-version-3",
+  "seed": 20261006,
+  "population_year": 2025,
+  "grid": {
+    "edge_length_km": 41.5,
+    "offset_east_km": -29.0,
+    "offset_north_km": -10.0,
+    "rotation_degrees": 46.5,
+    "cell_labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F",
+      "G",
+      "H",
+      "I",
+      "J",
+      "K",
+      "L",
+      "M",
+      "N",
+      "O",
+      "P",
+      "Q",
+      "R",
+      "S",
+      "T",
+      "U",
+      "V",
+      "W",
+      "X",
+      "Y",
+      "Z"
+    ],
+    "fully_covered": true
+  },
+  "item_count": 7,
+  "shared_with_previous_version": 3,
+  "answers": [
+    {
+      "number": 1,
+      "location_id": "municipality:554791",
+      "name": "Plzeň",
+      "category": "sidlo",
+      "cell": "K",
+      "gps": {
+        "latitude": 49.7416827,
+        "longitude": 13.3719148
+      },
+      "icao": null,
+      "population": 187863
+    },
+    {
+      "number": 2,
+      "location_id": "municipality:582786",
+      "name": "Brno",
+      "category": "sidlo",
+      "cell": "W",
+      "gps": {
+        "latitude": 49.2021252,
+        "longitude": 16.5779122
+      },
+      "icao": null,
+      "population": 404296
+    },
+    {
+      "number": 3,
+      "location_id": "municipality:598003",
+      "name": "Frýdek-Místek",
+      "category": "sidlo",
+      "cell": "N",
+      "gps": {
+        "latitude": 49.6797337,
+        "longitude": 18.3416945
+      },
+      "icao": null,
+      "population": 53164
+    },
+    {
+      "number": 4,
+      "location_id": "municipality:505927",
+      "name": "Opava",
+      "category": "sidlo",
+      "cell": "L",
+      "gps": {
+        "latitude": 49.9208963,
+        "longitude": 17.8936819
+      },
+      "icao": null,
+      "population": 54881
+    },
+    {
+      "number": 5,
+      "location_id": "airport:LKHB",
+      "name": "Havlíčkův Brod",
+      "category": "airport",
+      "cell": "P",
+      "gps": {
+        "latitude": 49.597198,
+        "longitude": 15.5492
+      },
+      "icao": "LKHB",
+      "population": null
+    },
+    {
+      "number": 6,
+      "location_id": "airport:LKTC",
+      "name": "Točná",
+      "category": "airport",
+      "cell": "M",
+      "gps": {
+        "latitude": 49.985435,
+        "longitude": 14.426465
+      },
+      "icao": "LKTC",
+      "population": null
+    },
+    {
+      "number": 7,
+      "location_id": "municipality:563889",
+      "name": "Liberec",
+      "category": "sidlo",
+      "cell": "B",
+      "gps": {
+        "latitude": 50.7661604,
+        "longitude": 15.0499257
+      },
+      "icao": null,
+      "population": 108214
+    }
+  ]
+}

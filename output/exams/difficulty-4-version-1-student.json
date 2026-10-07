@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "difficulty": 4,
+  "version": 1,
+  "set_id": "difficulty-4-version-1",
+  "seed": 20261006,
+  "population_year": 2025,
+  "grid": {
+    "edge_length_km": 41.5,
+    "offset_east_km": -29.0,
+    "offset_north_km": -10.0,
+    "rotation_degrees": 46.5,
+    "cell_labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F",
+      "G",
+      "H",
+      "I",
+      "J",
+      "K",
+      "L",
+      "M",
+      "N",
+      "O",
+      "P",
+      "Q",
+      "R",
+      "S",
+      "T",
+      "U",
+      "V",
+      "W",
+      "X",
+      "Y",
+      "Z"
+    ],
+    "fully_covered": true
+  },
+  "item_count": 9,
+  "shared_with_previous_version": 0,
+  "questions": [
+    {
+      "number": 1,
+      "name": "LKPC",
+      "category": "airport",
+      "location_id": "airport:LKPC"
+    },
+    {
+      "number": 2,
+      "name": "LKKV",
+      "category": "airport",
+      "location_id": "airport:LKKV"
+    },
+    {
+      "number": 3,
+      "name": "Žďár nad Sázavou",
+      "category": "sidlo",
+      "location_id": "municipality:595209"
+    },
+    {
+      "number": 4,
+      "name": "Sušice",
+      "category": "sidlo",
+      "location_id": "municipality:557153"
+    },
+    {
+      "number": 5,
+      "name": "Opava",
+      "category": "sidlo",
+      "location_id": "municipality:505927"
+    },
+    {
+      "number": 6,
+      "name": "Pardubice",
+      "category": "sidlo",
+      "location_id": "municipality:555134"
+    },
+    {
+      "number": 7,
+      "name": "Krupka",
+      "category": "sidlo",
+      "location_id": "municipality:567639"
+    },
+    {
+      "number": 8,
+      "name": "LKPM",
+      "category": "airport",
+      "location_id": "airport:LKPM"
+    },
+    {
+      "number": 9,
+      "name": "Cheb",
+      "category": "sidlo",
+      "location_id": "municipality:554481"
+    }
+  ]
+}

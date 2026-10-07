@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "difficulty": 1,
-  "version": 1,
-  "set_id": "difficulty-1-version-1",
+  "difficulty": 3,
+  "version": 4,
+  "set_id": "difficulty-3-version-4",
   "seed": 20261006,
   "population_year": 2025,
   "grid": {
@@ -40,44 +40,56 @@
     ],
     "fully_covered": true
   },
-  "item_count": 6,
-  "shared_with_previous_version": 0,
+  "item_count": 8,
+  "shared_with_previous_version": 4,
   "questions": [
     {
       "number": 1,
-      "name": "Praha",
-      "category": "sidlo",
-      "location_id": "municipality:554782"
+      "name": "LKPR",
+      "category": "airport",
+      "location_id": "airport:LKPR"
     },
     {
       "number": 2,
-      "name": "Liberec",
+      "name": "Rokycany",
       "category": "sidlo",
-      "location_id": "municipality:563889"
+      "location_id": "municipality:559717"
     },
     {
       "number": 3,
-      "name": "Brno",
+      "name": "Zlín",
       "category": "sidlo",
-      "location_id": "municipality:582786"
+      "location_id": "municipality:585068"
     },
     {
       "number": 4,
-      "name": "LKKV",
-      "category": "airport",
-      "location_id": "airport:LKKV"
+      "name": "Opava",
+      "category": "sidlo",
+      "location_id": "municipality:505927"
     },
     {
       "number": 5,
-      "name": "Plzeň",
-      "category": "sidlo",
-      "location_id": "municipality:554791"
+      "name": "LKLT",
+      "category": "airport",
+      "location_id": "airport:LKLT"
     },
     {
       "number": 6,
-      "name": "LKPO",
+      "name": "Znojmo",
+      "category": "sidlo",
+      "location_id": "municipality:593711"
+    },
+    {
+      "number": 7,
+      "name": "LKMT",
       "category": "airport",
-      "location_id": "airport:LKPO"
+      "location_id": "airport:LKMT"
+    },
+    {
+      "number": 8,
+      "name": "Olomouc",
+      "category": "sidlo",
+      "location_id": "municipality:500496"
     }
   ]
 }

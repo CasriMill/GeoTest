@@ -13,6 +13,7 @@
 - Dále malá tabulka se 2 řádky a 4 sloupci: Student, Predikce správná, Predikce nejitá, Predikce tipovaná nebo neurčená.
 - Každý list označit identifikátorem sady testu.
 - Připravit hodnotitelský list se správnými odpověďmi pro všech 5 variant dané úrovně obtížnosti.
+- Vytvořit 5 variant každé úrovně; každá další varianta sdílí přesně `n // 2` objektů s předchozí variantou.
 
 ### Počet a skladba objektů podle úrovně
 1. **Úroveň 1 — 6 objektů:** 4 sídla s více než 100 000 obyvateli; 2 mezinárodní letiště.
@@ -26,13 +27,13 @@
 - Na jedné pozici nesmějí být více než 2 objekty.
 
 ### Pravidlo pro velikost sídel
-- je-li v zadání testu uveden interval velikosti populace sídla, platí do populace spodní hodnota intervalu a horní už ne
+- Intervaly populace sídel mají spodní hranici včetně a horní hranici bez ní. Výslovné „více než 100 000“ znamená striktně nad 100 000.
 
-### Pravidlo pro opakování objektu v jedné úrovni testu
-- v jedné úrovni obtížnosti testu se mohou objekty ve variantách opakovat, měla být shoda u n//2, kde "n" je počet objektů v dané obtížnosti
+- Pět variant se vytváří deterministicky podle seedu. Objekty se mohou opakovat mezi sousedními variantami v uvedeném rozsahu; ostatní objekty se losují mimo předchozí variantu.
+- Závěrečná tabulka zachycuje studentovu predikci („správná“, „nejistá“, „tipovaná nebo neurčená“); nejde o automatické bodování.
 
-### K vyjasnění při implementaci
-- Jak vytvořit 5 variant jedné úrovně a zda se objekty mezi variantami mohou opakovat.
-- Zda se intervaly počtu obyvatel chápou včetně krajních hodnot.
-- Význam označení „Predikce nejitá“ a přesný způsob bodování - jedná se jen o závěrečný odhad studenta.
-- je-li zodpovězeno, odstranit z tohoto bloku
+### Další úkoly pro vylepšení
+- [x] V učitelském přehledu doplnit sloupec „Obtížnost“.
+- [ ] V učitelském přehledu do buňky "Obtížnost" doplnit vzdálenost pozice hledaného objektu na tomto řádku od středu příslušné buňky přepočtenou na % (bude-li objekt uprostřed buňky, bude mít hodnotu 0% a bude-li v rohu hexagonální buňky tak to bude 100%). Zatím je vytvořeno jen v difficult == 1, potřeba doplnit do ostatních difficult.
+- [ ] V souhrnné přehledové mapě s hexagonáloní sítí v učitelském přehledu v každé difficulty zvlášť vyznačit body pozic hledaných objektů dané difficulty.
+- [ ] V souhrnné přehledové mapě s hexagonáloní sítí v učitelském přehledu v každé difficulty zvlášť doplnit u bodů pozic hledaných objektů dané difficulty popiskama ve struktuře `X-Y/Y/Y/Y/Y` (kde X je difficulty a Y jsou čísla řádků pro verze 1–5, případně tečka, pokud objekt v dané verzi není). Popisek bude vpravo do vyznačeného bodu.
