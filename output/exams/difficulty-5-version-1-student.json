@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "difficulty": 5,
+  "version": 1,
+  "set_id": "difficulty-5-version-1",
+  "seed": 20261006,
+  "population_year": 2025,
+  "grid": {
+    "edge_length_km": 41.5,
+    "offset_east_km": -29.0,
+    "offset_north_km": -10.0,
+    "rotation_degrees": 46.5,
+    "cell_labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F",
+      "G",
+      "H",
+      "I",
+      "J",
+      "K",
+      "L",
+      "M",
+      "N",
+      "O",
+      "P",
+      "Q",
+      "R",
+      "S",
+      "T",
+      "U",
+      "V",
+      "W",
+      "X",
+      "Y",
+      "Z"
+    ],
+    "fully_covered": true
+  },
+  "item_count": 10,
+  "shared_with_previous_version": 0,
+  "questions": [
+    {
+      "number": 1,
+      "name": "LKZL",
+      "category": "airport",
+      "location_id": "airport:LKZL"
+    },
+    {
+      "number": 2,
+      "name": "LKVO",
+      "category": "airport",
+      "location_id": "airport:LKVO"
+    },
+    {
+      "number": 3,
+      "name": "Tachov",
+      "category": "sidlo",
+      "location_id": "municipality:560715"
+    },
+    {
+      "number": 4,
+      "name": "LKPI",
+      "category": "airport",
+      "location_id": "airport:LKPI"
+    },
+    {
+      "number": 5,
+      "name": "Kaplice",
+      "category": "sidlo",
+      "location_id": "municipality:545562"
+    },
+    {
+      "number": 6,
+      "name": "LKCS",
+      "category": "airport",
+      "location_id": "airport:LKCS"
+    },
+    {
+      "number": 7,
+      "name": "Rudná",
+      "category": "sidlo",
+      "location_id": "municipality:531723"
+    },
+    {
+      "number": 8,
+      "name": "Moravské Budějovice",
+      "category": "sidlo",
+      "location_id": "municipality:591181"
+    },
+    {
+      "number": 9,
+      "name": "Frýdek-Místek",
+      "category": "sidlo",
+      "location_id": "municipality:598003"
+    },
+    {
+      "number": 10,
+      "name": "Rousínov",
+      "category": "sidlo",
+      "location_id": "municipality:593559"
+    }
+  ]
+}

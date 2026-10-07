@@ -3,19 +3,20 @@
 GeoTest is a Python application for generating printable ATC training tests
 based on a hexagonal grid fitted to a map of the Czech Republic.
 
-## Planned test materials
+## Test materials
 
 - A student map with the hexagonal cells labeled by letters.
 - A list of settlements for the student to locate by cell.
 - An answer area for the student's confidence in each response: certain,
   probable, or guessed.
-- Five difficulty levels and multiple test versions to reduce copying.
+- Five difficulty levels with five versions per level.
 - A teacher map and scoring key for each version and difficulty level.
 
 The app creates a blank outline map from the Czech Republic's OpenStreetMap
 administrative boundary and provides an interactive tool for fitting a regular
-hexagonal grid. SVG maps include OpenStreetMap attribution. Printable tests
-and PDF generation are not implemented yet.
+hexagonal grid. SVG maps include OpenStreetMap attribution. Exam generation
+creates printable A4 HTML sheets and teacher keys; use the browser's print
+dialog or Save to PDF.
 
 ## Run
 
@@ -134,10 +135,27 @@ and is broader than a definitive sports-aerodrome designation. Map coordinates
 from OpenStreetMap are subject to the ODbL; each source and source element is
 recorded in the data.
 
-## Generating an exam set
+## Generating all exam sets
 
-Create a reproducible student question list and separate teacher answer key
-from `data/locations.json`:
+Generate five versions for each difficulty level from the checked-in location
+catalogue and existing labeled map:
+
+```powershell
+python -m geotest exam-suite
+```
+
+The command writes JSON data and standalone printable HTML files to
+`output/exams/`: 25 student sheets and five teacher keys, each containing the
+answers for all five variants of its difficulty. Student pages embed the
+existing `output/czechia_hex_grid_final.svg`; the map is not regenerated. Use
+`--seed` for reproducible selections, `--exam-map` to select another existing
+labeled SVG, `--locations-json` to select another catalogue, and
+`--exam-output-dir` to change the output directory. Each variant after the first
+shares exactly half the objects (rounded down) with the preceding variant.
+
+## Generating a custom exam set
+
+The lower-level `exam` command remains available for a single custom JSON set:
 
 ```powershell
 python -m geotest exam --population-minimum 100000 `
@@ -151,8 +169,7 @@ primary threshold and at or above the supplemental threshold. Airports are
 sampled from the selected category using the seed unless `--airport-icao`
 specifies exact ICAO codes. The command writes separate
 student and teacher-key JSON files to `output/exams/`; the seed and selected
-location IDs are retained so a set can be reproduced. Printable PDF output is
-not yet implemented.
+location IDs are retained so a set can be reproduced.
 
 ## Test
 

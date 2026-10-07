@@ -1,0 +1,164 @@
+{
+  "schema_version": 1,
+  "difficulty": 4,
+  "version": 3,
+  "set_id": "difficulty-4-version-3",
+  "seed": 20261006,
+  "population_year": 2025,
+  "grid": {
+    "edge_length_km": 41.5,
+    "offset_east_km": -29.0,
+    "offset_north_km": -10.0,
+    "rotation_degrees": 46.5,
+    "cell_labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F",
+      "G",
+      "H",
+      "I",
+      "J",
+      "K",
+      "L",
+      "M",
+      "N",
+      "O",
+      "P",
+      "Q",
+      "R",
+      "S",
+      "T",
+      "U",
+      "V",
+      "W",
+      "X",
+      "Y",
+      "Z"
+    ],
+    "fully_covered": true
+  },
+  "item_count": 9,
+  "shared_with_previous_version": 4,
+  "answers": [
+    {
+      "number": 1,
+      "location_id": "municipality:567442",
+      "name": "Teplice",
+      "category": "sidlo",
+      "cell": "F",
+      "gps": {
+        "latitude": 50.6453483,
+        "longitude": 13.8237361
+      },
+      "icao": null,
+      "population": 50856
+    },
+    {
+      "number": 2,
+      "location_id": "municipality:581283",
+      "name": "Blansko",
+      "category": "sidlo",
+      "cell": "R",
+      "gps": {
+        "latitude": 49.3601855,
+        "longitude": 16.6605476
+      },
+      "icao": null,
+      "population": 19900
+    },
+    {
+      "number": 3,
+      "location_id": "municipality:545881",
+      "name": "Jindřichův Hradec",
+      "category": "sidlo",
+      "cell": "V",
+      "gps": {
+        "latitude": 49.1625885,
+        "longitude": 14.9931083
+      },
+      "icao": null,
+      "population": 20369
+    },
+    {
+      "number": 4,
+      "location_id": "municipality:598003",
+      "name": "Frýdek-Místek",
+      "category": "sidlo",
+      "cell": "N",
+      "gps": {
+        "latitude": 49.6797337,
+        "longitude": 18.3416945
+      },
+      "icao": null,
+      "population": 53164
+    },
+    {
+      "number": 5,
+      "location_id": "municipality:595209",
+      "name": "Žďár nad Sázavou",
+      "category": "sidlo",
+      "cell": "P",
+      "gps": {
+        "latitude": 49.5689023,
+        "longitude": 15.9431036
+      },
+      "icao": null,
+      "population": 20247
+    },
+    {
+      "number": 6,
+      "location_id": "municipality:549240",
+      "name": "Písek",
+      "category": "sidlo",
+      "cell": "U",
+      "gps": {
+        "latitude": 49.2866729,
+        "longitude": 14.1693224
+      },
+      "icao": null,
+      "population": 31002
+    },
+    {
+      "number": 7,
+      "location_id": "airport:LKHV",
+      "name": "Hořovice",
+      "category": "airport",
+      "cell": "M",
+      "gps": {
+        "latitude": 49.848099,
+        "longitude": 13.8935
+      },
+      "icao": "LKHV",
+      "population": null
+    },
+    {
+      "number": 8,
+      "location_id": "airport:LKNA",
+      "name": "Náměšť",
+      "category": "airport",
+      "cell": "W",
+      "gps": {
+        "latitude": 49.166272,
+        "longitude": 16.123981
+      },
+      "icao": "LKNA",
+      "population": null
+    },
+    {
+      "number": 9,
+      "location_id": "airport:LKSO",
+      "name": "Soběslav",
+      "category": "airport",
+      "cell": "U",
+      "gps": {
+        "latitude": 49.2455,
+        "longitude": 14.712993
+      },
+      "icao": "LKSO",
+      "population": null
+    }
+  ]
+}

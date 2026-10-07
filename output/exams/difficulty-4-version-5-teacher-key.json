@@ -1,0 +1,164 @@
+{
+  "schema_version": 1,
+  "difficulty": 4,
+  "version": 5,
+  "set_id": "difficulty-4-version-5",
+  "seed": 20261006,
+  "population_year": 2025,
+  "grid": {
+    "edge_length_km": 41.5,
+    "offset_east_km": -29.0,
+    "offset_north_km": -10.0,
+    "rotation_degrees": 46.5,
+    "cell_labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F",
+      "G",
+      "H",
+      "I",
+      "J",
+      "K",
+      "L",
+      "M",
+      "N",
+      "O",
+      "P",
+      "Q",
+      "R",
+      "S",
+      "T",
+      "U",
+      "V",
+      "W",
+      "X",
+      "Y",
+      "Z"
+    ],
+    "fully_covered": true
+  },
+  "item_count": 9,
+  "shared_with_previous_version": 4,
+  "answers": [
+    {
+      "number": 1,
+      "location_id": "municipality:585068",
+      "name": "Zlín",
+      "category": "sidlo",
+      "cell": "T",
+      "gps": {
+        "latitude": 49.2320202,
+        "longitude": 17.6732151
+      },
+      "icao": null,
+      "population": 74917
+    },
+    {
+      "number": 2,
+      "location_id": "municipality:545881",
+      "name": "Jindřichův Hradec",
+      "category": "sidlo",
+      "cell": "V",
+      "gps": {
+        "latitude": 49.1625885,
+        "longitude": 14.9931083
+      },
+      "icao": null,
+      "population": 20369
+    },
+    {
+      "number": 3,
+      "location_id": "airport:LKSO",
+      "name": "Soběslav",
+      "category": "airport",
+      "cell": "U",
+      "gps": {
+        "latitude": 49.2455,
+        "longitude": 14.712993
+      },
+      "icao": "LKSO",
+      "population": null
+    },
+    {
+      "number": 4,
+      "location_id": "airport:LKCB",
+      "name": "Cheb",
+      "category": "airport",
+      "cell": "I",
+      "gps": {
+        "latitude": 50.066101,
+        "longitude": 12.4117
+      },
+      "icao": "LKCB",
+      "population": null
+    },
+    {
+      "number": 5,
+      "location_id": "municipality:565555",
+      "name": "Roudnice nad Labem",
+      "category": "sidlo",
+      "cell": "F",
+      "gps": {
+        "latitude": 50.4230676,
+        "longitude": 14.2487676
+      },
+      "icao": null,
+      "population": 12561
+    },
+    {
+      "number": 6,
+      "location_id": "municipality:505927",
+      "name": "Opava",
+      "category": "sidlo",
+      "cell": "L",
+      "gps": {
+        "latitude": 49.9208963,
+        "longitude": 17.8936819
+      },
+      "icao": null,
+      "population": 54881
+    },
+    {
+      "number": 7,
+      "location_id": "airport:LKPN",
+      "name": "Podhořany",
+      "category": "airport",
+      "cell": "H",
+      "gps": {
+        "latitude": 49.939201,
+        "longitude": 15.5497
+      },
+      "icao": "LKPN",
+      "population": null
+    },
+    {
+      "number": 8,
+      "location_id": "municipality:586722",
+      "name": "Veselí nad Moravou",
+      "category": "sidlo",
+      "cell": "X",
+      "gps": {
+        "latitude": 48.948111,
+        "longitude": 17.3809376
+      },
+      "icao": null,
+      "population": 10574
+    },
+    {
+      "number": 9,
+      "location_id": "municipality:577731",
+      "name": "Svitavy",
+      "category": "sidlo",
+      "cell": "J",
+      "gps": {
+        "latitude": 49.7653276,
+        "longitude": 16.4706087
+      },
+      "icao": null,
+      "population": 16041
+    }
+  ]
+}

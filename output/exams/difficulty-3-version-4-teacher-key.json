@@ -1,0 +1,151 @@
+{
+  "schema_version": 1,
+  "difficulty": 3,
+  "version": 4,
+  "set_id": "difficulty-3-version-4",
+  "seed": 20261006,
+  "population_year": 2025,
+  "grid": {
+    "edge_length_km": 41.5,
+    "offset_east_km": -29.0,
+    "offset_north_km": -10.0,
+    "rotation_degrees": 46.5,
+    "cell_labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F",
+      "G",
+      "H",
+      "I",
+      "J",
+      "K",
+      "L",
+      "M",
+      "N",
+      "O",
+      "P",
+      "Q",
+      "R",
+      "S",
+      "T",
+      "U",
+      "V",
+      "W",
+      "X",
+      "Y",
+      "Z"
+    ],
+    "fully_covered": true
+  },
+  "item_count": 8,
+  "shared_with_previous_version": 4,
+  "answers": [
+    {
+      "number": 1,
+      "location_id": "airport:LKPR",
+      "name": "PRAHA/Ruzyně",
+      "category": "airport",
+      "cell": "M",
+      "gps": {
+        "latitude": 50.100874,
+        "longitude": 14.259911
+      },
+      "icao": "LKPR",
+      "population": null
+    },
+    {
+      "number": 2,
+      "location_id": "municipality:559717",
+      "name": "Rokycany",
+      "category": "sidlo",
+      "cell": "S",
+      "gps": {
+        "latitude": 49.7275553,
+        "longitude": 13.579111
+      },
+      "icao": null,
+      "population": 14248
+    },
+    {
+      "number": 3,
+      "location_id": "municipality:585068",
+      "name": "Zlín",
+      "category": "sidlo",
+      "cell": "T",
+      "gps": {
+        "latitude": 49.2320202,
+        "longitude": 17.6732151
+      },
+      "icao": null,
+      "population": 74917
+    },
+    {
+      "number": 4,
+      "location_id": "municipality:505927",
+      "name": "Opava",
+      "category": "sidlo",
+      "cell": "L",
+      "gps": {
+        "latitude": 49.9208963,
+        "longitude": 17.8936819
+      },
+      "icao": null,
+      "population": 54881
+    },
+    {
+      "number": 5,
+      "location_id": "airport:LKLT",
+      "name": "Letňany",
+      "category": "airport",
+      "cell": "G",
+      "gps": {
+        "latitude": 50.131401,
+        "longitude": 14.5256
+      },
+      "icao": "LKLT",
+      "population": null
+    },
+    {
+      "number": 6,
+      "location_id": "municipality:593711",
+      "name": "Znojmo",
+      "category": "sidlo",
+      "cell": "W",
+      "gps": {
+        "latitude": 48.8566999,
+        "longitude": 16.0633227
+      },
+      "icao": null,
+      "population": 33989
+    },
+    {
+      "number": 7,
+      "location_id": "airport:LKMT",
+      "name": "OSTRAVA/Mošnov",
+      "category": "airport",
+      "cell": "L",
+      "gps": {
+        "latitude": 49.696301,
+        "longitude": 18.111099
+      },
+      "icao": "LKMT",
+      "population": null
+    },
+    {
+      "number": 8,
+      "location_id": "municipality:500496",
+      "name": "Olomouc",
+      "category": "sidlo",
+      "cell": "R",
+      "gps": {
+        "latitude": 49.5983322,
+        "longitude": 17.2790951
+      },
+      "icao": null,
+      "population": 105297
+    }
+  ]
+}

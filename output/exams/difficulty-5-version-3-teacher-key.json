@@ -1,0 +1,177 @@
+{
+  "schema_version": 1,
+  "difficulty": 5,
+  "version": 3,
+  "set_id": "difficulty-5-version-3",
+  "seed": 20261006,
+  "population_year": 2025,
+  "grid": {
+    "edge_length_km": 41.5,
+    "offset_east_km": -29.0,
+    "offset_north_km": -10.0,
+    "rotation_degrees": 46.5,
+    "cell_labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F",
+      "G",
+      "H",
+      "I",
+      "J",
+      "K",
+      "L",
+      "M",
+      "N",
+      "O",
+      "P",
+      "Q",
+      "R",
+      "S",
+      "T",
+      "U",
+      "V",
+      "W",
+      "X",
+      "Y",
+      "Z"
+    ],
+    "fully_covered": true
+  },
+  "item_count": 10,
+  "shared_with_previous_version": 5,
+  "answers": [
+    {
+      "number": 1,
+      "location_id": "municipality:537683",
+      "name": "Poděbrady",
+      "category": "sidlo",
+      "cell": "G",
+      "gps": {
+        "latitude": 50.1432473,
+        "longitude": 15.1216478
+      },
+      "icao": null,
+      "population": 15238
+    },
+    {
+      "number": 2,
+      "location_id": "municipality:579858",
+      "name": "Vrchlabí",
+      "category": "sidlo",
+      "cell": "B",
+      "gps": {
+        "latitude": 50.6367234,
+        "longitude": 15.5986624
+      },
+      "icao": null,
+      "population": 12028
+    },
+    {
+      "number": 3,
+      "location_id": "municipality:593559",
+      "name": "Rousínov",
+      "category": "sidlo",
+      "cell": "R",
+      "gps": {
+        "latitude": 49.2039215,
+        "longitude": 16.8819665
+      },
+      "icao": null,
+      "population": 5948
+    },
+    {
+      "number": 4,
+      "location_id": "municipality:536385",
+      "name": "Jeseník",
+      "category": "sidlo",
+      "cell": "E",
+      "gps": {
+        "latitude": 50.2094396,
+        "longitude": 17.226217
+      },
+      "icao": null,
+      "population": 10324
+    },
+    {
+      "number": 5,
+      "location_id": "airport:LKUO",
+      "name": "Ústí nad Orlicí",
+      "category": "airport",
+      "cell": "J",
+      "gps": {
+        "latitude": 49.9786,
+        "longitude": 16.426399
+      },
+      "icao": "LKUO",
+      "population": null
+    },
+    {
+      "number": 6,
+      "location_id": "municipality:556254",
+      "name": "Horažďovice",
+      "category": "sidlo",
+      "cell": "S",
+      "gps": {
+        "latitude": 49.3230597,
+        "longitude": 13.7144088
+      },
+      "icao": null,
+      "population": 5056
+    },
+    {
+      "number": 7,
+      "location_id": "airport:LKCT",
+      "name": "Chotěboř",
+      "category": "airport",
+      "cell": "P",
+      "gps": {
+        "latitude": 49.685799,
+        "longitude": 15.6761
+      },
+      "icao": "LKCT",
+      "population": null
+    },
+    {
+      "number": 8,
+      "location_id": "municipality:545562",
+      "name": "Kaplice",
+      "category": "sidlo",
+      "cell": "Z",
+      "gps": {
+        "latitude": 48.7468919,
+        "longitude": 14.5035844
+      },
+      "icao": null,
+      "population": 7547
+    },
+    {
+      "number": 9,
+      "location_id": "airport:LKVO",
+      "name": "PRAHA/Vodochody",
+      "category": "airport",
+      "cell": "G",
+      "gps": {
+        "latitude": 50.216599,
+        "longitude": 14.3958
+      },
+      "icao": "LKVO",
+      "population": null
+    },
+    {
+      "number": 10,
+      "location_id": "airport:LKCS",
+      "name": "České Budějovice",
+      "category": "airport",
+      "cell": "U",
+      "gps": {
+        "latitude": 48.948171,
+        "longitude": 14.42832
+      },
+      "icao": "LKCS",
+      "population": null
+    }
+  ]
+}

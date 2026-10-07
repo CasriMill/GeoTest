@@ -1,0 +1,177 @@
+{
+  "schema_version": 1,
+  "difficulty": 5,
+  "version": 2,
+  "set_id": "difficulty-5-version-2",
+  "seed": 20261006,
+  "population_year": 2025,
+  "grid": {
+    "edge_length_km": 41.5,
+    "offset_east_km": -29.0,
+    "offset_north_km": -10.0,
+    "rotation_degrees": 46.5,
+    "cell_labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F",
+      "G",
+      "H",
+      "I",
+      "J",
+      "K",
+      "L",
+      "M",
+      "N",
+      "O",
+      "P",
+      "Q",
+      "R",
+      "S",
+      "T",
+      "U",
+      "V",
+      "W",
+      "X",
+      "Y",
+      "Z"
+    ],
+    "fully_covered": true
+  },
+  "item_count": 10,
+  "shared_with_previous_version": 5,
+  "answers": [
+    {
+      "number": 1,
+      "location_id": "municipality:579858",
+      "name": "Vrchlabí",
+      "category": "sidlo",
+      "cell": "B",
+      "gps": {
+        "latitude": 50.6367234,
+        "longitude": 15.5986624
+      },
+      "icao": null,
+      "population": 12028
+    },
+    {
+      "number": 2,
+      "location_id": "airport:LKCS",
+      "name": "České Budějovice",
+      "category": "airport",
+      "cell": "U",
+      "gps": {
+        "latitude": 48.948171,
+        "longitude": 14.42832
+      },
+      "icao": "LKCS",
+      "population": null
+    },
+    {
+      "number": 3,
+      "location_id": "municipality:545562",
+      "name": "Kaplice",
+      "category": "sidlo",
+      "cell": "Z",
+      "gps": {
+        "latitude": 48.7468919,
+        "longitude": 14.5035844
+      },
+      "icao": null,
+      "population": 7547
+    },
+    {
+      "number": 4,
+      "location_id": "municipality:593559",
+      "name": "Rousínov",
+      "category": "sidlo",
+      "cell": "R",
+      "gps": {
+        "latitude": 49.2039215,
+        "longitude": 16.8819665
+      },
+      "icao": null,
+      "population": 5948
+    },
+    {
+      "number": 5,
+      "location_id": "municipality:567451",
+      "name": "Bílina",
+      "category": "sidlo",
+      "cell": "F",
+      "gps": {
+        "latitude": 50.5545934,
+        "longitude": 13.7508954
+      },
+      "icao": null,
+      "population": 14401
+    },
+    {
+      "number": 6,
+      "location_id": "airport:LKVO",
+      "name": "PRAHA/Vodochody",
+      "category": "airport",
+      "cell": "G",
+      "gps": {
+        "latitude": 50.216599,
+        "longitude": 14.3958
+      },
+      "icao": "LKVO",
+      "population": null
+    },
+    {
+      "number": 7,
+      "location_id": "airport:LKSU",
+      "name": "Šumperk",
+      "category": "airport",
+      "cell": "J",
+      "gps": {
+        "latitude": 49.960602,
+        "longitude": 17.017799
+      },
+      "icao": "LKSU",
+      "population": null
+    },
+    {
+      "number": 8,
+      "location_id": "airport:LKDK",
+      "name": "Dvůr Králové",
+      "category": "airport",
+      "cell": "H",
+      "gps": {
+        "latitude": 50.4142,
+        "longitude": 15.8369
+      },
+      "icao": "LKDK",
+      "population": null
+    },
+    {
+      "number": 9,
+      "location_id": "municipality:570508",
+      "name": "Nový Bydžov",
+      "category": "sidlo",
+      "cell": "H",
+      "gps": {
+        "latitude": 50.2299143,
+        "longitude": 15.4587749
+      },
+      "icao": null,
+      "population": 7298
+    },
+    {
+      "number": 10,
+      "location_id": "municipality:531723",
+      "name": "Rudná",
+      "category": "sidlo",
+      "cell": "M",
+      "gps": {
+        "latitude": 50.0345036,
+        "longitude": 14.2176644
+      },
+      "icao": null,
+      "population": 5560
+    }
+  ]
+}

@@ -1,0 +1,177 @@
+{
+  "schema_version": 1,
+  "difficulty": 5,
+  "version": 5,
+  "set_id": "difficulty-5-version-5",
+  "seed": 20261006,
+  "population_year": 2025,
+  "grid": {
+    "edge_length_km": 41.5,
+    "offset_east_km": -29.0,
+    "offset_north_km": -10.0,
+    "rotation_degrees": 46.5,
+    "cell_labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F",
+      "G",
+      "H",
+      "I",
+      "J",
+      "K",
+      "L",
+      "M",
+      "N",
+      "O",
+      "P",
+      "Q",
+      "R",
+      "S",
+      "T",
+      "U",
+      "V",
+      "W",
+      "X",
+      "Y",
+      "Z"
+    ],
+    "fully_covered": true
+  },
+  "item_count": 10,
+  "shared_with_previous_version": 5,
+  "answers": [
+    {
+      "number": 1,
+      "location_id": "airport:LKPO",
+      "name": "Přerov",
+      "category": "airport",
+      "cell": "R",
+      "gps": {
+        "latitude": 49.4258,
+        "longitude": 17.404699
+      },
+      "icao": "LKPO",
+      "population": null
+    },
+    {
+      "number": 2,
+      "location_id": "municipality:598968",
+      "name": "Dolní Lutyně",
+      "category": "sidlo",
+      "cell": "N",
+      "gps": {
+        "latitude": 49.9113983,
+        "longitude": 18.420413
+      },
+      "icao": null,
+      "population": 5350
+    },
+    {
+      "number": 3,
+      "location_id": "airport:LKVO",
+      "name": "PRAHA/Vodochody",
+      "category": "airport",
+      "cell": "G",
+      "gps": {
+        "latitude": 50.216599,
+        "longitude": 14.3958
+      },
+      "icao": "LKVO",
+      "population": null
+    },
+    {
+      "number": 4,
+      "location_id": "airport:LKRO",
+      "name": "Roudnice",
+      "category": "airport",
+      "cell": "F",
+      "gps": {
+        "latitude": 50.410186,
+        "longitude": 14.22708
+      },
+      "icao": "LKRO",
+      "population": null
+    },
+    {
+      "number": 5,
+      "location_id": "municipality:537683",
+      "name": "Poděbrady",
+      "category": "sidlo",
+      "cell": "G",
+      "gps": {
+        "latitude": 50.1432473,
+        "longitude": 15.1216478
+      },
+      "icao": null,
+      "population": 15238
+    },
+    {
+      "number": 6,
+      "location_id": "municipality:586846",
+      "name": "Jihlava",
+      "category": "sidlo",
+      "cell": "P",
+      "gps": {
+        "latitude": 49.4049303,
+        "longitude": 15.5803312
+      },
+      "icao": null,
+      "population": 53686
+    },
+    {
+      "number": 7,
+      "location_id": "airport:LKKO",
+      "name": "Kolín",
+      "category": "airport",
+      "cell": "O",
+      "gps": {
+        "latitude": 50.0019,
+        "longitude": 15.1733
+      },
+      "icao": "LKKO",
+      "population": null
+    },
+    {
+      "number": 8,
+      "location_id": "municipality:556831",
+      "name": "Nýrsko",
+      "category": "sidlo",
+      "cell": "S",
+      "gps": {
+        "latitude": 49.2728591,
+        "longitude": 13.1574377
+      },
+      "icao": null,
+      "population": 5023
+    },
+    {
+      "number": 9,
+      "location_id": "municipality:545392",
+      "name": "Český Krumlov",
+      "category": "sidlo",
+      "cell": "Z",
+      "gps": {
+        "latitude": 48.8131018,
+        "longitude": 14.3112707
+      },
+      "icao": null,
+      "population": 12658
+    },
+    {
+      "number": 10,
+      "location_id": "municipality:581259",
+      "name": "Žamberk",
+      "category": "sidlo",
+      "cell": "J",
+      "gps": {
+        "latitude": 50.091679,
+        "longitude": 16.4712374
+      },
+      "icao": null,
+      "population": 5770
+    }
+  ]
+}

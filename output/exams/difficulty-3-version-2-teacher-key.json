@@ -1,0 +1,151 @@
+{
+  "schema_version": 1,
+  "difficulty": 3,
+  "version": 2,
+  "set_id": "difficulty-3-version-2",
+  "seed": 20261006,
+  "population_year": 2025,
+  "grid": {
+    "edge_length_km": 41.5,
+    "offset_east_km": -29.0,
+    "offset_north_km": -10.0,
+    "rotation_degrees": 46.5,
+    "cell_labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F",
+      "G",
+      "H",
+      "I",
+      "J",
+      "K",
+      "L",
+      "M",
+      "N",
+      "O",
+      "P",
+      "Q",
+      "R",
+      "S",
+      "T",
+      "U",
+      "V",
+      "W",
+      "X",
+      "Y",
+      "Z"
+    ],
+    "fully_covered": true
+  },
+  "item_count": 8,
+  "shared_with_previous_version": 4,
+  "answers": [
+    {
+      "number": 1,
+      "location_id": "municipality:544256",
+      "name": "České Budějovice",
+      "category": "sidlo",
+      "cell": "U",
+      "gps": {
+        "latitude": 48.9766454,
+        "longitude": 14.4910531
+      },
+      "icao": null,
+      "population": 97128
+    },
+    {
+      "number": 2,
+      "location_id": "municipality:500496",
+      "name": "Olomouc",
+      "category": "sidlo",
+      "cell": "R",
+      "gps": {
+        "latitude": 49.5983322,
+        "longitude": 17.2790951
+      },
+      "icao": null,
+      "population": 105297
+    },
+    {
+      "number": 3,
+      "location_id": "airport:LKLN",
+      "name": "PLZEŇ/Líně",
+      "category": "airport",
+      "cell": "S",
+      "gps": {
+        "latitude": 49.675201,
+        "longitude": 13.2746
+      },
+      "icao": "LKLN",
+      "population": null
+    },
+    {
+      "number": 4,
+      "location_id": "municipality:559717",
+      "name": "Rokycany",
+      "category": "sidlo",
+      "cell": "S",
+      "gps": {
+        "latitude": 49.7275553,
+        "longitude": 13.579111
+      },
+      "icao": null,
+      "population": 14248
+    },
+    {
+      "number": 5,
+      "location_id": "municipality:539911",
+      "name": "Příbram",
+      "category": "sidlo",
+      "cell": "M",
+      "gps": {
+        "latitude": 49.6682814,
+        "longitude": 14.0083704
+      },
+      "icao": null,
+      "population": 32917
+    },
+    {
+      "number": 6,
+      "location_id": "airport:LKBE",
+      "name": "Benešov",
+      "category": "airport",
+      "cell": "O",
+      "gps": {
+        "latitude": 49.740799,
+        "longitude": 14.6447
+      },
+      "icao": "LKBE",
+      "population": null
+    },
+    {
+      "number": 7,
+      "location_id": "airport:LKPO",
+      "name": "Přerov",
+      "category": "airport",
+      "cell": "R",
+      "gps": {
+        "latitude": 49.4258,
+        "longitude": 17.404699
+      },
+      "icao": "LKPO",
+      "population": null
+    },
+    {
+      "number": 8,
+      "location_id": "municipality:585068",
+      "name": "Zlín",
+      "category": "sidlo",
+      "cell": "T",
+      "gps": {
+        "latitude": 49.2320202,
+        "longitude": 17.6732151
+      },
+      "icao": null,
+      "population": 74917
+    }
+  ]
+}

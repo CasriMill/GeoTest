@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "difficulty": 3,
+  "version": 5,
+  "set_id": "difficulty-3-version-5",
+  "seed": 20261006,
+  "population_year": 2025,
+  "grid": {
+    "edge_length_km": 41.5,
+    "offset_east_km": -29.0,
+    "offset_north_km": -10.0,
+    "rotation_degrees": 46.5,
+    "cell_labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F",
+      "G",
+      "H",
+      "I",
+      "J",
+      "K",
+      "L",
+      "M",
+      "N",
+      "O",
+      "P",
+      "Q",
+      "R",
+      "S",
+      "T",
+      "U",
+      "V",
+      "W",
+      "X",
+      "Y",
+      "Z"
+    ],
+    "fully_covered": true
+  },
+  "item_count": 8,
+  "shared_with_previous_version": 4,
+  "questions": [
+    {
+      "number": 1,
+      "name": "Zlín",
+      "category": "sidlo",
+      "location_id": "municipality:585068"
+    },
+    {
+      "number": 2,
+      "name": "Olomouc",
+      "category": "sidlo",
+      "location_id": "municipality:500496"
+    },
+    {
+      "number": 3,
+      "name": "LKBE",
+      "category": "airport",
+      "location_id": "airport:LKBE"
+    },
+    {
+      "number": 4,
+      "name": "Rokycany",
+      "category": "sidlo",
+      "location_id": "municipality:559717"
+    },
+    {
+      "number": 5,
+      "name": "LKVO",
+      "category": "airport",
+      "location_id": "airport:LKVO"
+    },
+    {
+      "number": 6,
+      "name": "Jihlava",
+      "category": "sidlo",
+      "location_id": "municipality:586846"
+    },
+    {
+      "number": 7,
+      "name": "LKMT",
+      "category": "airport",
+      "location_id": "airport:LKMT"
+    },
+    {
+      "number": 8,
+      "name": "Rychnov nad Kněžnou",
+      "category": "sidlo",
+      "location_id": "municipality:576069"
+    }
+  ]
+}

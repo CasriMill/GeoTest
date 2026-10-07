@@ -8,7 +8,9 @@ from geotest.boundary import create_boundary_map
 from geotest.exams import (
     DEFAULT_EXAM_OUTPUT_DIR,
     build_exam_documents,
+    build_exam_suite,
     write_exam_documents,
+    write_exam_suite,
 )
 from geotest.final_map import (
     DEFAULT_FINAL_MAP_PATH,
@@ -25,7 +27,16 @@ def main(argv: Sequence[str] | None = None) -> None:
     parser.add_argument(
         "command",
         nargs="?",
-        choices=("boundary", "grid", "grid3", "gui", "final", "locations", "exam"),
+        choices=(
+            "boundary",
+            "grid",
+            "grid3",
+            "gui",
+            "final",
+            "locations",
+            "exam",
+            "exam-suite",
+        ),
     )
     parser.add_argument(
         "--output",
@@ -93,7 +104,19 @@ def main(argv: Sequence[str] | None = None) -> None:
         "--exam-output-dir",
         type=Path,
         default=DEFAULT_EXAM_OUTPUT_DIR,
-        help="directory for student and teacher-key JSON files",
+        help="directory for generated exam files",
+    )
+    parser.add_argument(
+        "--locations-json",
+        type=Path,
+        default=DEFAULT_LOCATIONS_PATH,
+        help="JSON catalogue used to create exam sets",
+    )
+    parser.add_argument(
+        "--exam-map",
+        type=Path,
+        default=DEFAULT_FINAL_MAP_PATH,
+        help="existing labeled SVG map embedded in printable student sheets",
     )
     args = parser.parse_args(argv or [])
 
@@ -160,9 +183,25 @@ def main(argv: Sequence[str] | None = None) -> None:
         )
         return
 
+    if args.command == "exam-suite":
+        locations_document = json.loads(
+            args.locations_json.read_text(encoding="utf-8")
+        )
+        suite = build_exam_suite(locations_document, seed=args.seed)
+        write_exam_suite(
+            suite,
+            map_path=args.exam_map,
+            output_dir=args.exam_output_dir,
+        )
+        print(
+            f"Exam suite written to {args.exam_output_dir}: "
+            "5 difficulties, 5 variants each"
+        )
+        return
+
     if args.command == "exam":
         locations_document = json.loads(
-            DEFAULT_LOCATIONS_PATH.read_text(encoding="utf-8")
+            args.locations_json.read_text(encoding="utf-8")
         )
         student_document, answer_document = build_exam_documents(
             locations_document,

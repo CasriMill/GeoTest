@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "difficulty": 4,
+  "version": 5,
+  "set_id": "difficulty-4-version-5",
+  "seed": 20261006,
+  "population_year": 2025,
+  "grid": {
+    "edge_length_km": 41.5,
+    "offset_east_km": -29.0,
+    "offset_north_km": -10.0,
+    "rotation_degrees": 46.5,
+    "cell_labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F",
+      "G",
+      "H",
+      "I",
+      "J",
+      "K",
+      "L",
+      "M",
+      "N",
+      "O",
+      "P",
+      "Q",
+      "R",
+      "S",
+      "T",
+      "U",
+      "V",
+      "W",
+      "X",
+      "Y",
+      "Z"
+    ],
+    "fully_covered": true
+  },
+  "item_count": 9,
+  "shared_with_previous_version": 4,
+  "questions": [
+    {
+      "number": 1,
+      "name": "Zlín",
+      "category": "sidlo",
+      "location_id": "municipality:585068"
+    },
+    {
+      "number": 2,
+      "name": "Jindřichův Hradec",
+      "category": "sidlo",
+      "location_id": "municipality:545881"
+    },
+    {
+      "number": 3,
+      "name": "LKSO",
+      "category": "airport",
+      "location_id": "airport:LKSO"
+    },
+    {
+      "number": 4,
+      "name": "LKCB",
+      "category": "airport",
+      "location_id": "airport:LKCB"
+    },
+    {
+      "number": 5,
+      "name": "Roudnice nad Labem",
+      "category": "sidlo",
+      "location_id": "municipality:565555"
+    },
+    {
+      "number": 6,
+      "name": "Opava",
+      "category": "sidlo",
+      "location_id": "municipality:505927"
+    },
+    {
+      "number": 7,
+      "name": "LKPN",
+      "category": "airport",
+      "location_id": "airport:LKPN"
+    },
+    {
+      "number": 8,
+      "name": "Veselí nad Moravou",
+      "category": "sidlo",
+      "location_id": "municipality:586722"
+    },
+    {
+      "number": 9,
+      "name": "Svitavy",
+      "category": "sidlo",
+      "location_id": "municipality:577731"
+    }
+  ]
+}

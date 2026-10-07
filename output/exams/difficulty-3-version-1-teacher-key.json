@@ -1,0 +1,151 @@
+{
+  "schema_version": 1,
+  "difficulty": 3,
+  "version": 1,
+  "set_id": "difficulty-3-version-1",
+  "seed": 20261006,
+  "population_year": 2025,
+  "grid": {
+    "edge_length_km": 41.5,
+    "offset_east_km": -29.0,
+    "offset_north_km": -10.0,
+    "rotation_degrees": 46.5,
+    "cell_labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F",
+      "G",
+      "H",
+      "I",
+      "J",
+      "K",
+      "L",
+      "M",
+      "N",
+      "O",
+      "P",
+      "Q",
+      "R",
+      "S",
+      "T",
+      "U",
+      "V",
+      "W",
+      "X",
+      "Y",
+      "Z"
+    ],
+    "fully_covered": true
+  },
+  "item_count": 8,
+  "shared_with_previous_version": 0,
+  "answers": [
+    {
+      "number": 1,
+      "location_id": "municipality:500496",
+      "name": "Olomouc",
+      "category": "sidlo",
+      "cell": "R",
+      "gps": {
+        "latitude": 49.5983322,
+        "longitude": 17.2790951
+      },
+      "icao": null,
+      "population": 105297
+    },
+    {
+      "number": 2,
+      "location_id": "municipality:586846",
+      "name": "Jihlava",
+      "category": "sidlo",
+      "cell": "P",
+      "gps": {
+        "latitude": 49.4049303,
+        "longitude": 15.5803312
+      },
+      "icao": null,
+      "population": 53686
+    },
+    {
+      "number": 3,
+      "location_id": "airport:LKPO",
+      "name": "Přerov",
+      "category": "airport",
+      "cell": "R",
+      "gps": {
+        "latitude": 49.4258,
+        "longitude": 17.404699
+      },
+      "icao": "LKPO",
+      "population": null
+    },
+    {
+      "number": 4,
+      "location_id": "airport:LKCH",
+      "name": "Chomutov",
+      "category": "airport",
+      "cell": "F",
+      "gps": {
+        "latitude": 50.468899,
+        "longitude": 13.4681
+      },
+      "icao": "LKCH",
+      "population": null
+    },
+    {
+      "number": 5,
+      "location_id": "municipality:599051",
+      "name": "Bohumín",
+      "category": "sidlo",
+      "cell": "N",
+      "gps": {
+        "latitude": 49.9100155,
+        "longitude": 18.3495981
+      },
+      "icao": null,
+      "population": 20234
+    },
+    {
+      "number": 6,
+      "location_id": "municipality:544256",
+      "name": "České Budějovice",
+      "category": "sidlo",
+      "cell": "U",
+      "gps": {
+        "latitude": 48.9766454,
+        "longitude": 14.4910531
+      },
+      "icao": null,
+      "population": 97128
+    },
+    {
+      "number": 7,
+      "location_id": "municipality:539911",
+      "name": "Příbram",
+      "category": "sidlo",
+      "cell": "M",
+      "gps": {
+        "latitude": 49.6682814,
+        "longitude": 14.0083704
+      },
+      "icao": null,
+      "population": 32917
+    },
+    {
+      "number": 8,
+      "location_id": "airport:LKKB",
+      "name": "Kbely",
+      "category": "airport",
+      "cell": "G",
+      "gps": {
+        "latitude": 50.121399,
+        "longitude": 14.5436
+      },
+      "icao": "LKKB",
+      "population": null
+    }
+  ]
+}

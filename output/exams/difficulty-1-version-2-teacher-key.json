@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "difficulty": 1,
-  "version": 1,
-  "set_id": "difficulty-1-version-1",
+  "version": 2,
+  "set_id": "difficulty-1-version-2",
   "seed": 20261006,
   "population_year": 2025,
   "grid": {
@@ -41,7 +41,7 @@
     "fully_covered": true
   },
   "item_count": 6,
-  "shared_with_previous_version": 0,
+  "shared_with_previous_version": 3,
   "answers": [
     {
       "number": 1,
@@ -58,6 +58,32 @@
     },
     {
       "number": 2,
+      "location_id": "airport:LKLT",
+      "name": "Letňany",
+      "category": "airport",
+      "cell": "G",
+      "gps": {
+        "latitude": 50.131401,
+        "longitude": 14.5256
+      },
+      "icao": "LKLT",
+      "population": null
+    },
+    {
+      "number": 3,
+      "location_id": "airport:LKPO",
+      "name": "Přerov",
+      "category": "airport",
+      "cell": "R",
+      "gps": {
+        "latitude": 49.4258,
+        "longitude": 17.404699
+      },
+      "icao": "LKPO",
+      "population": null
+    },
+    {
+      "number": 4,
       "location_id": "municipality:563889",
       "name": "Liberec",
       "category": "sidlo",
@@ -70,56 +96,30 @@
       "population": 108214
     },
     {
-      "number": 3,
-      "location_id": "municipality:582786",
-      "name": "Brno",
-      "category": "sidlo",
-      "cell": "W",
-      "gps": {
-        "latitude": 49.2021252,
-        "longitude": 16.5779122
-      },
-      "icao": null,
-      "population": 404296
-    },
-    {
-      "number": 4,
-      "location_id": "airport:LKKV",
-      "name": "Karlovy Vary",
-      "category": "airport",
-      "cell": "K",
-      "gps": {
-        "latitude": 50.202999,
-        "longitude": 12.915
-      },
-      "icao": "LKKV",
-      "population": null
-    },
-    {
       "number": 5,
-      "location_id": "municipality:554791",
-      "name": "Plzeň",
+      "location_id": "municipality:554821",
+      "name": "Ostrava",
       "category": "sidlo",
-      "cell": "K",
+      "cell": "N",
       "gps": {
-        "latitude": 49.7416827,
-        "longitude": 13.3719148
+        "latitude": 49.8197665,
+        "longitude": 18.2373511
       },
       "icao": null,
-      "population": 187863
+      "population": 280853
     },
     {
       "number": 6,
-      "location_id": "airport:LKPO",
-      "name": "Přerov",
-      "category": "airport",
+      "location_id": "municipality:500496",
+      "name": "Olomouc",
+      "category": "sidlo",
       "cell": "R",
       "gps": {
-        "latitude": 49.4258,
-        "longitude": 17.404699
+        "latitude": 49.5983322,
+        "longitude": 17.2790951
       },
-      "icao": "LKPO",
-      "population": null
+      "icao": null,
+      "population": 105297
     }
   ]
 }
